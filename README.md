@@ -1,6 +1,6 @@
-# MERN-E-Commerce-Frontend
+# E-Shopit-Frontend
 
-MERN-E-Commerce-Frontend is the frontend of an e-commerce web application built with ReactJS ,Material UI, ContextAPI, React-router-dom
+E-Shopit-Frontend is the frontend of an e-commerce web application built with ReactJS ,Material UI, ContextAPI, React-router-dom
 
 ## Live Link
 
