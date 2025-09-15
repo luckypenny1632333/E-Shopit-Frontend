@@ -10,24 +10,27 @@ import { RiEyeFill, RiEyeOffFill } from 'react-icons/ri';
 
 import CopyRight from '../../../Components/CopyRight/CopyRight'
 
-
 const AdminRegister = () => {
-
   const [credentials, setCredentials] = useState({ firstName: "", lastName: '', email: "", phoneNumber: '', password: "", key: "" })
   const [showPassword, setShowPassword] = useState(false);
+
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
   };
-  const navigate = useNavigate()
+
+  const navigate = useNavigate();
+
   const handleOnChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value })
   }
+
   useEffect(() => {
     let auth = localStorage.getItem('Authorization');
     if (auth) {
       navigate("/")
     }
   }, [])
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     let phoneRegex = /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/gm;
@@ -71,9 +74,7 @@ const AdminRegister = () => {
     } catch (error) {
       toast.error("Invalid Credentials", { autoClose: 500, theme: 'colored' })
     }
-
   }
-
 
   return (
     <>
